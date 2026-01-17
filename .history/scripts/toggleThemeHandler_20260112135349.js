@@ -1,0 +1,29 @@
+import { iconTheme, img, source } from "./elements";
+
+export const toggleThemeHandler = () => {
+  // نغير ال data set عشان ال css يشوف شغله
+  const html = document.querySelector("html");
+  const isDark = html.dataset.theme === "dark";
+  html.dataset.theme = isDark ? "light" : "dark";
+
+  updateBackground(html.dataset.theme);
+  updateThemeIcon(html.dataset.theme);
+};
+
+const updateBackground = (theme) => {
+  if (theme === "dark") {
+    source.srcset = "images/bg-desktop-dark.jpg";
+    img.src = "images/bg-mobile-dark.jpg";
+  } else {
+    source.srcset = "images/bg-desktop-light.jpg";
+    img.src = "images/bg-mobile-light.jpg";
+  }
+};
+
+const updateThemeIcon = (theme) => {
+  if (theme === "dark") {
+    iconTheme.src = "images/icon-moon.svg";
+  } else {
+    iconTheme.src = "images/icon-sun.svg";
+  }
+};

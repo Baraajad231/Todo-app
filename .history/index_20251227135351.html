@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/style.scss" />
+  </head>
+  <body>
+    <div class="conatiner">
+      <picture class="background-Wrapper">
+        <source
+          media="(min-width:465px)"
+          srcset="images/bg-desktop-light.jpg"
+        />
+        <img
+          src="images/bg-mobile-light.jpg"
+          alt="bg-mobile-light"
+          class="background background-light"
+        />
+      </picture>
+
+      <div class="todo">
+        <div class="todo__header">
+          <h1 class="todo__title">TODO</h1>
+          <img src="images/icon-moon.svg" alt="moon icon" class="todo__theme" />
+        </div>
+        <ul class="todo__list">
+          <li class="todo__list__row todo__list__row-input">
+            <span class="checkbox">
+              <img
+                src="./images/icon-check.svg"
+                alt="check"
+                class="checkbox__image"
+              />
+            </span>
+            <input type="text" placeholder="Creat a new Todo..." />
+          </li>
+
+          <li class="todo__list__row">
+            <span class="checkbox">
+              <img
+                src="./images/icon-check.svg"
+                alt="check"
+                class="checkbox__image"
+              />
+            </span>
+            <span class="todo__list__task">Play</span>
+          </li>
+          <li class="todo__list__row">
+            <span class="checkbox">
+              <img
+                src="./images/icon-check.svg"
+                alt="check"
+                class="checkbox__image"
+              />
+            </span>
+            <span class="todo__list__task">Run</span>
+          </li>
+          <li class="todo__list__row">
+            <span class="checkbox">
+              <img
+                src="./images/icon-check.svg"
+                alt="check"
+                class="checkbox__image"
+              />
+            </span>
+            <span class="todo__list__task">HH;aklsd</span>
+          </li>
+          <li class="todo__list__row">
+            <span class="checkbox">
+              <img
+                src="./images/icon-check.svg"
+                alt="check"
+                class="checkbox__image"
+              />
+            </span>
+            <span class="todo__list__task">ASJdhllk</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Add dynamic number -->
+      items left All Active Completed Clear Completed Drag and drop to reorder
+      list
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
