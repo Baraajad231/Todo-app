@@ -12,5 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initClickEventsListeners();
   inputTaskEvent();
   initDragAndDropEvent();
-  initTheme(getTheme());
+   if (getTheme()) {
+    initTheme(getTheme());
+  } else {
+    initTheme("light");
+  }
 });
