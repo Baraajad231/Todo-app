@@ -1,0 +1,22 @@
+import { inputField } from "./elements.js";
+import { getTasks, saveTasks } from "./tasksStorage.js";
+
+export const inputTaskEvent = () => {
+  inputField.addEventListener("keydown", (e, index) => {
+    if (e.key === "Enter") {
+      const taskInterd = inputField.value;
+      if (taskInterd) {
+        console.log(taskInterd);
+        let tasks = getTasks();
+        let index = tasks.length.toString();
+        tasks.push({
+          task: taskInterd,
+          isCompleted: false,
+                  saveTasks(tasks);
+        inputField.value = ""
+        });
+
+      }
+    }
+  });
+};

@@ -1,0 +1,89 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button,
+[type="submit"] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Josefin Sans";
+  color: black;
+}
+/* End Reset */
+
+/*container*/
+.container {
+  position: relative;
+}
+.background {
+  width: 100vw;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 8rem);
+  margin: 5rem 4rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    .todo__title {
+      font-size: 2.4rem;
+      color: white;
+      letter-spacing: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    &__row {
+      background-color: white;
+      padding: 1.5rem 2rem;
+
+      & .checkbox {
+        border: 1px solid rgb(156, 155, 155);
+        border-radius: 50%;
+        background-color: aqua;
+      }
+      &-input {
+        margin-bottom: 2rem;
+      }
+
+      &:not(&-input) {
+        border-bottom: 1px solid rgb(170, 167, 167);
+      }
+    }
+  }
+}
