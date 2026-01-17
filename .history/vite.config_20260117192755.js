@@ -1,5 +1,3 @@
-import { defineConfig } from "vite";
-
 export default defineConfig({
   base: "/Todo-app/",
   // هذا السطر يخبر Vite أن المجلد الرئيسي هو جذر المشروع
